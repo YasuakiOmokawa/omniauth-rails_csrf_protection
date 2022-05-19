@@ -8,4 +8,6 @@ elsif ENV["RAILS_BRANCH"]
 end
 # rubocop:enable Bundler/DuplicatedGem
 
+gem 'debug' # デバッガ
+
 gemspec

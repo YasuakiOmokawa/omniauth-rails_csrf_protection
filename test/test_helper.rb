@@ -3,6 +3,8 @@ $LOAD_PATH.unshift File.expand_path("../lib", __dir__)
 # Simple Rails application template, based on Rails issue template
 # https://github.com/rails/rails/blob/master/guides/bug_report_templates/action_controller_gem.rb
 
+require 'debug'
+
 # Helper method to silence warnings from bundler/inline
 def silence_warnings
   old_verbose, $VERBOSE = $VERBOSE, nil
