@@ -13,6 +13,7 @@ class ApplicationTest < Minitest::Test
     post "/auth/developer"
     follow_redirect!
 
+    binding.b
     assert last_response.not_found?
   end
 
