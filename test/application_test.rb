@@ -13,7 +13,6 @@ class ApplicationTest < Minitest::Test
     post "/auth/developer"
     follow_redirect!
 
-    binding.b
     assert last_response.not_found?
   end
 
@@ -21,6 +20,7 @@ class ApplicationTest < Minitest::Test
     post "/auth/developer", authenticity_token: "BAD_TOKEN"
     follow_redirect!
 
+    binding.b
     assert last_response.not_found?
   end
 
