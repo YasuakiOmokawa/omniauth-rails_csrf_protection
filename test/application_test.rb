@@ -20,13 +20,14 @@ class ApplicationTest < Minitest::Test
     post "/auth/developer", authenticity_token: "BAD_TOKEN"
     follow_redirect!
 
-    binding.b
     assert last_response.not_found?
   end
 
   def test_request_phrase_with_correct_token_via_post
+    binding.b
     post "/auth/developer", authenticity_token: authenticity_token
 
+    binding.b
     assert last_response.ok?
   end
 
