@@ -66,6 +66,7 @@ end
 # A small test controller which we use to retrive the valid authenticity token
 class ApplicationController < ActionController::Base
   def token
+    binding.b
     render plain: form_authenticity_token
   end
 end
