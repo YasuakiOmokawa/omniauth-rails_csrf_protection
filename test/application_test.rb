@@ -27,7 +27,6 @@ class ApplicationTest < Minitest::Test
     binding.b
     post "/auth/developer", authenticity_token: authenticity_token
 
-    binding.b
     assert last_response.ok?
   end
 
