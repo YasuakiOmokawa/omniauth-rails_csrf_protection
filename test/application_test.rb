@@ -1,7 +1,7 @@
 require "test_helper"
 
 class ApplicationTest < Minitest::Test
-  include Rack::Test::Methods
+  # include Rack::Test::Methods
 
   def test_request_phrase_not_accessible_via_get
     get "/auth/developer"
