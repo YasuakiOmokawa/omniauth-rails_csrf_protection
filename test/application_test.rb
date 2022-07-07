@@ -10,9 +10,10 @@ class ApplicationTest < Minitest::Test
   end
 
   def test_request_phrase_without_token_via_post
-    post "/auth/developer"
     binding.b
+    post "/auth/developer"
     follow_redirect!
+
 
     assert last_response.not_found?
   end

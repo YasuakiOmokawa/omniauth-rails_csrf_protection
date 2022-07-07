@@ -55,7 +55,7 @@ class TestApp < Rails::Application
   end
 
   # We need to call initialize! to run all railties
-  initialize!
+  # initialize!
 
   # Define our custom routes. This needs to be called after initialize!
   routes.draw do
