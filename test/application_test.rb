@@ -11,7 +11,6 @@ class ApplicationTest < Minitest::Test
 
   def test_request_phrase_without_token_via_post
     post "/auth/developer"
-    binding.b
     follow_redirect!
 
     assert last_response.not_found?
@@ -27,6 +26,7 @@ class ApplicationTest < Minitest::Test
   def test_request_phrase_with_correct_token_via_post
     post "/auth/developer", authenticity_token: authenticity_token
 
+    binding.b
     assert last_response.ok?
   end
 
